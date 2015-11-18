@@ -21,6 +21,7 @@ void join_impl(stringstream &stream, string separator, Arg first, Rest ...rest)
 	join_impl(stream, separator, rest...);
 }
 
+// Join data together with a custom separator. 
 template <typename ...Args>
 string join(string separator, Args ...args)
 {
