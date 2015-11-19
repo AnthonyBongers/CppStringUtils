@@ -18,7 +18,7 @@ template <typename Arg, typename ...Rest>
 void join_impl(stringstream &stream, string separator, Arg first, Rest ...rest)
 {
 	stream << first << separator;
-	join_impl(stream, separator, rest...);
+	join_impl(stream, move(separator), rest...);
 }
 
 // Join data together with a custom separator. 
@@ -27,7 +27,7 @@ string join(string separator, Args ...args)
 {
 	stringstream stream;
 	
-	join_impl(stream, separator, args...);
+	join_impl(stream, move(separator), args...);
 	
 	return stream.str();
 }
