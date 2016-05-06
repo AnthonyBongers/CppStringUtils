@@ -19,7 +19,7 @@ namespace string_utils
     }
   }
   
-  // Join data together with a custom separator.
+  // Concatenate data together in a type-safe manner.
   template <typename ...Args>
   inline std::string concat(Args ...args)
   {
