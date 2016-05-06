@@ -6,7 +6,7 @@
 
 namespace string_utils
 {
-  inline std::vector<std::string> split(std::string value, std::string token)
+  inline std::vector<std::string> split(const std::string &value, const std::string &token)
   {
     std::vector<std::string> collection;
     auto begin = value.begin();
