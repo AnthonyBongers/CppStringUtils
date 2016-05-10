@@ -35,7 +35,12 @@ Can be used to separate data in meaningful ways, such as generating comma-separa
 Used to split up text into chunks, separated by a given token.
 
 ```cpp
+std::string sentence = "The quick brown fox jumps over the lazy dog";
+auto words = split(sentence, " ");
 
+std::cout << "The 5th word in the sentence is " << words[4] << "!";
+
+// Output: The 5th word in the sentence is jumps!
 ```
 
 
